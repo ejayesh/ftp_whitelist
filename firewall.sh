@@ -5,8 +5,8 @@
 ## List Locations
 #
 
-WHITELIST=/usr/local/etc/whitelist.txt
-BLACKLIST=/usr/local/etc/blacklist.txt
+WHITELIST=/home/ubuntu/ftp_whitelist/whitelist.txt
+BLACKLIST=/home/ubuntu/ftp_whitelist/blacklist.txt
 
 #
 ## Specify ports you wish to use.
