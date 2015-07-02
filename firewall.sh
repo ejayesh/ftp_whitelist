@@ -5,6 +5,18 @@
 ## List Locations
 #
 
+args=("$@")
+
+if [ "$args" == "stop" ]; then
+	echo "Stopping firewall and allowing everyone..."
+	iptables -F
+	iptables -X
+	iptables -P INPUT ACCEPT
+	iptables -P FORWARD ACCEPT
+	iptables -P OUTPUT ACCEPT
+	exit 0
+fi
+
 WHITELIST=/home/ubuntu/ftp_whitelist/whitelist.txt
 BLACKLIST=/home/ubuntu/ftp_whitelist/blacklist.txt
 
